@@ -31,7 +31,6 @@ AFRAME.registerComponent('fmod', {
     fileName = [
       "Master.bank",
       "Master.strings.bank",
-      ...this.data.banks
     ];
   
     for (var count = 0; count < fileName.length; count++) {
@@ -92,7 +91,9 @@ AFRAME.registerComponent('fmod', {
 });
 
 AFRAME.registerComponent('fmod-listener', {
-  schema: {},
+  schema: {
+
+  },
 
   init: function () {
     this.listenerAttributes = {
@@ -183,7 +184,9 @@ AFRAME.registerComponent('fmod-event', {
 });
 
 AFRAME.registerComponent('footstepper', {
-  schema: {},
+  schema: {
+
+  },
 
   init: function () {
     this.event = this.el.components['fmod-event'];
